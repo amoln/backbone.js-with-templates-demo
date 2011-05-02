@@ -1,0 +1,62 @@
+	<div id="tabs">
+	    <ul>
+	        <li><a href="#fragment-1" ><span class="fragment-1">Events Home</span></a></li>
+	        <li><a href="#fragment-2" ><span class="fragment-2">My Events</span></a></li>
+	        <li><a href="#fragment-3" id="fragment-3-tab" class="fragment-3" ><span>Event Details</span></a></li>
+	    </ul>
+	    <div id="fragment-1">
+	      <div id="events-main-tab" class="events-main">
+		 			<div style="font-weight:bold;font-size:18px;padding:5px">Events from your Network</div>
+					<div id="events-home">
+					</div>
+					<div>
+						<br>
+						<br>
+						<br>
+						<br>
+						<br>
+					</div>
+
+					<div style="font-weight:bold;font-size:18px;padding:5px">Your Events</div>
+					<div id="my-events">
+					</div>
+
+				</div>
+	    </div>
+	    <div id="fragment-2">
+				<div id="my-events-tab">
+					<div id="my-events2">
+					</div>
+				</div>	
+	    </div>
+	    <div id="fragment-3">
+				<div id="event-detail-tab">
+					<div style="font-weight:bold;font-size:18px;padding:5px">Event Details</div>
+					<div id="event-detail">
+					</div>
+					<div>
+						<br>
+						<br>
+					</div>
+					<div style="font-weight:bold;font-size:18px;padding:5px">Comments</div>
+					<div id="event-comments">
+					</div>
+					<div>
+						<input type="text" name="new-comment" id="new-comment" size="70"/>
+						<button name="submit-comment" id="submit-comment" >Add Comment</button>
+					</div>	
+				</div>	
+	    </div>
+	</div>
+
+<script id="event" type="text/html">
+ 	<li id="event-template"><div class="title">{{ title }}</div> <div>{{ description }}</div> <div class="attendees">attendees: {{ attendees }}</div><div><a href="javascript:void(0)" class="rsvp" >RSVP</a></div></li>
+</script>
+
+<script id="my_event" type="text/x-handlebars-template">
+ 	<li id="event-template"><div class="title">You are attending {{ title }}</div><div class="attendees">attendees: {{ attendees }}</div></li>
+</script>
+
+<script id="event_detail" type="text/html">
+ 	<li id="event-detail-template"><div class="title">{{ title }}</div> <div>{{ description }}</div> <div class="attendees">attendees: {{ attendees }}</div><div class="comments">{{ comment_count }} Comments</div><div><a href="javascript:void(0)" class="rsvp" >RSVP</a></div></li>
+</script>

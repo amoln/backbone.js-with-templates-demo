@@ -1,0 +1,18 @@
+This demo application shows how to use Backbone.js along with some template library for client side implementation.
+
+It creates a simple Events application and allows a user to RSVP to an event. The Events table only maintains a RSVP count.
+The aim of the demo is to show how different pages on the client side can be created with multiple Backbone Views operating on same/different Backbone Models
+and can interact with each other easily.
+
+The UI consists of 3 pages
+- Events Home page which shows 'Events From Your Network' and 'My Events' once the user RSVPs to an event. Both the categories have different UI templates and hence different views.
+- My Events page which just shows 'My Events'.
+- Event Detail page which shows details for an Event along with a comments feature.
+
+The javascript file application.js contains code that shows how Backbone.js handles the CRUD operations on Event, Comment models, UI rendering for the different views, as well as navigation between the 3 pages.
+
+The application can be accessed at http://<host>:<port>/
+For bootstrapping, add some events into the database using the URL http://<host>:<port>/events/new
+Note - For Backbone.js to interact with the server, the CRUD actions on the controller have to return JSON response.
+
+The application runs on Jruby 1.5.6 and Rails 3, please change as required to get it running on your machine.
