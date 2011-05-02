@@ -9,7 +9,7 @@ The UI consists of 3 pages
 - My Events page which just shows 'My Events'.
 - Event Detail page which shows details for an Event along with a comments feature.
 
-The javascript file application.js contains code that shows how Backbone.js handles the CRUD operations on Event, Comment models, UI rendering for the different views, as well as navigation between the 3 pages.
+The javascript file application.js contains code that shows how Backbone.js handles the CRUD operations on Event, Comment models, UI rendering for the different views, as well as navigation between the 3 pages. For such a simple demo, I have placed all the MVC code in the single file, however for a complex application, it is advisable to have the different objects under different folders within the javascripts folder and then use a packaging mechanism such as JAMMIT to bundle them together for deployment. 
 
 The application can be accessed at http://<host>:<port>/
 For bootstrapping, add some events into the database using the URL http://<host>:<port>/events/new
