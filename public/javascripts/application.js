@@ -20,6 +20,8 @@ $(function(){
 	var EventView = Backbone.View.extend({
 	
 	   // Cache the template function for a single item.
+		// This view uses ICanHaz.js (based on Mustache) template. Simply call ich.<template id> and it will return the template defined in the view as a compiled function.
+		// Check home.html.erb for ICanHaz template.
 	   template: ich.event,
 	
 	   // The DOM events specific to an item.
@@ -60,7 +62,10 @@ $(function(){
 
 	// Another View for a single Event, with a different UI template
 	var MyEventView = EventView.extend({
+		
 		// Cache the template function for a single item.
+		// This view uses Handlebars.js (based on Mustache) template. Simply call Handlebars.compile(<template html>) and it will return the Handlebars template defined in the view as a compiled function.
+		// Check home.html.erb for Handlebars template.
 	  template: Handlebars.compile($("#my_event").html()),
 	  
 	  initialize: function() {
